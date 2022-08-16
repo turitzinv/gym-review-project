@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-control {
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#login-form {
+  text-align: center;
+  justify-content: center;
+}
