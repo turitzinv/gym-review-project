@@ -15,6 +15,11 @@ const NavBar = () => {
         Log in
       </NavLink>
       </li>
+      <li class="nav_item">
+      <NavLink class="nav-link" aria-current="page" to="/signuppage">
+        Sign Up
+      </NavLink>
+      </li>
     </div>
   )
 }
