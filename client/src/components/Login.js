@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Login = () => {
+const [username, setUsername] = useState("");
+const [password, setPassword] = useState("");
+
+
   return (
     <form id="login-form">
     <div class="mb-3">
