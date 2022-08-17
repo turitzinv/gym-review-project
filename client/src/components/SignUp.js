@@ -42,7 +42,7 @@ const SignUp = () => {
     </div>
     <div class="mb-3">
       <input
-        type="text"
+        type="password"
         class="form-control"
         id="password"
         placeholder="Password"
