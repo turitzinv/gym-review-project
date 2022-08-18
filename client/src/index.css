@@ -17,6 +17,8 @@ code {
   text-align: center;
   margin: auto;
   border: 1px solid black;
+  position: relative;
+  top: 150px
 }
 
 #login-form {
@@ -24,7 +26,17 @@ code {
   justify-content: center;
 }
 
+#login-button {
+  position: relative;
+  top: 150px;
+}
+
 #signup-form {
   text-align: center;
   justify-content: center;
+}
+
+#signup-button {
+  position: relative;
+  top: 150px;
 }
