@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import Gyms from './components/Gyms';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path="/signuppage">
           <SignUp />
+        </Route>
+        <Route path="/gyms">
+          <Gyms />
         </Route>
       </Switch>
     </div>

@@ -20,6 +20,11 @@ const NavBar = () => {
         Sign Up
       </NavLink>
       </li>
+      <li class="nav_item">
+      <NavLink class="nav-link" aria-current="page" to="/gyms">
+        Gyms
+      </NavLink>
+      </li>
     </div>
   )
 }
