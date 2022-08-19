@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gyms = () => {
   return (
-    <div>Need GymCard</div>
+    <div>Need GymCards</div>
   )
 }
 
