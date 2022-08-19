@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   get "/users", to: "users#index"
   #get "/gyms", to: "gyms#index"
-  #get "/reviews", to: "reviews#index"
+  get "/reviews", to: "reviews#index"
+
+  #resources :reviews, only: [:index]
 
   resources :gyms, only: [:index] do
     resources :reviews, only: [:index]
   end
-
-  resources :reviews, only: [:index]
 
 end
