@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 
+  def index
+    users = User.all
+    render json: users
+  end
+
   def create
-    byebug
+  byebug
   end
   
   def show
@@ -9,7 +14,7 @@ class UsersController < ApplicationController
     if user
       render json: user
     else
-      render json: { error: "Not authorized" }, status: :unathorized
+      render json: { error: "Not authorized" }, status: :unauthorized
     end
   end
 

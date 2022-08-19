@@ -1,12 +1,14 @@
 puts "🌱 Seeding Gyms and Reviews..."
 
+User.create(username: "John Smith")
+User.create(username: "Mary Thompson")
+User.create(username: "Larry Phillips")
+
 Gym.create(name: "Boosted Fitness", address: "12 Plainview Drive")
 Gym.create(name: "24/7 Gym", address: "55 Lake Plaza")
 Gym.create(name: "Full Throttle Fitness", address: "34 Ocean Lane")
 
-User.create(username: "John Smith")
-User.create(username: "Mary Thompson")
-User.create(username: "Larry Phillips")
+
 
 Review.create(
   description: "Gym is spacious, a lot to work with and there's a pool!",

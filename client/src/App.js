@@ -9,6 +9,7 @@ import Gyms from './components/Gyms';
 
 function App() {
   const [user, setUser] = useState(null)
+  const [allGyms, setAllGyms] = useState([])
 
   useEffect(() => {
     fetch("/me").then((resp) => {
@@ -17,6 +18,12 @@ function App() {
       }
     });
   }, []);
+
+  useEffect(() => {
+    fetch("/gyms")
+    .then ((resp) => resp.json())
+    .then((gyms) => console.log(gyms))
+  }, [])
 
   // function handleLogin(user) {
   //   setUser(user)

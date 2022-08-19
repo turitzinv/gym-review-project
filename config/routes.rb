@@ -6,6 +6,16 @@ Rails.application.routes.draw do
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-  get "/signup", to: "users#create"
+  post "/signup", to: "users#create"
   get "/me", to: "users#show"
+  get "/users", to: "users#index"
+  #get "/gyms", to: "gyms#index"
+  #get "/reviews", to: "reviews#index"
+
+  resources :gyms, only: [:index] do
+    resources :reviews, only: [:index]
+  end
+
+  resources :reviews, only: [:index]
+
 end
