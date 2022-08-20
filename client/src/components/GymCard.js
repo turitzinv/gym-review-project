@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useHistory } from "react-router-dom";
 
 const GymCard = ({ name, address,image, gym, review }) => {
 
-  // function onClick() {
-  //   fetch(`/gyms/${gym.id}`, {
-  //     method: ""
-  //   })
-  // }
+  let history = useHistory()
+
+  function onClick() {
+    history.push(`/gymreview/${gym.id}`)
+  }
 
 
   return (
@@ -14,7 +15,7 @@ const GymCard = ({ name, address,image, gym, review }) => {
       <img src={image} />
       <h2>{name}</h2>
       <p>{address}</p>
-      <button>Click for Reviews</button>
+      <button onClick= {onClick}>Click for Reviews</button>
     </div>
   )
 }
