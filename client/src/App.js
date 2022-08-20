@@ -25,6 +25,7 @@ function App() {
     .then ((resp) => resp.json())
     .then((gyms) => setAllGyms(gyms))
   }, [])
+  
 
   // function handleLogin(user) {
   //   setUser(user)
