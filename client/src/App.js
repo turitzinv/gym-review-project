@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     fetch("/gyms")
     .then ((resp) => resp.json())
-    .then((gyms) => console.log(gyms))
+    .then((gyms) => setAllGyms(gyms))
   }, [])
 
   // function handleLogin(user) {

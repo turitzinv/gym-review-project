@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_08_19_230254) do
   create_table "gyms", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,8 +1,8 @@
 puts "🌱 Seeding Gyms, Users, Reviews..."
 
-Gym.create(name: "Boosted Fitness", address: "12 Plainview Drive")
-Gym.create(name: "24/7 Gym", address: "55 Lake Plaza")
-Gym.create(name: "Full Throttle Fitness", address: "34 Ocean Lane")
+Gym.create(name: "Boosted Fitness", address: "12 Plainview Drive", image_url: "https://user-images.githubusercontent.com/93049794/185754475-2f09d586-6fe5-44e1-ade3-2a0939806b2e.jpg")
+Gym.create(name: "24/7 Gym", address: "55 Lake Plaza", image_url: "https://user-images.githubusercontent.com/93049794/185754551-e2e39f87-b0b3-40d9-bd79-3d64ed764762.jpg")
+Gym.create(name: "Full Throttle Fitness", address: "34 Ocean Lane", image_url: "https://user-images.githubusercontent.com/93049794/185754621-f56c297f-d9e0-4cc8-90fb-a545fb132d52.jpg")
 
 User.create(username: "John Smith", password: "John Smith")
 User.create(username: "Mary Thompson", password: "Mary Thompson")
