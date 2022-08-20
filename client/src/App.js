@@ -47,7 +47,7 @@ function App() {
           <SignUp />
         </Route>
         <Route path="/gyms">
-          <Gyms />
+          <Gyms allGyms={allGyms} />
         </Route>
       </Switch>
     </div>

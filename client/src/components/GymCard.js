@@ -1,8 +1,21 @@
 import React from 'react'
 
-const GymCard = () => {
+const GymCard = ({ name, address,image, gym, review }) => {
+
+  // function onClick() {
+  //   fetch(`/gyms/${gym.id}`, {
+  //     method: ""
+  //   })
+  // }
+
+
   return (
-    <div>GymCard</div>
+    <div>
+      <img src={image} />
+      <h2>{name}</h2>
+      <p>{address}</p>
+      <button>Click for Reviews</button>
+    </div>
   )
 }
 

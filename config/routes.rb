@@ -9,12 +9,11 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   get "/users", to: "users#index"
-  #get "/gyms", to: "gyms#index"
   get "/reviews", to: "reviews#index"
 
   #resources :reviews, only: [:index]
 
-  resources :gyms, only: [:index] do
+  resources :gyms, only: [:index, :show] do
     resources :reviews, only: [:index]
   end
 
