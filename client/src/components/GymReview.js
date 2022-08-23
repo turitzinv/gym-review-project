@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 
-const GymReview = ({ allGyms }) => {
+const GymReview = () => {
   const [gym, setGym] = useState({})
   const [reviews, setReviews] = useState([])
   const { id } = useParams();

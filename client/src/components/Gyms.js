@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import GymCard from './GymCard'
 
-const Gyms = ({ allGyms }) => {
+const Gyms = () => {
+  const [allGyms, setAllGyms] = useState([])
+
+  useEffect(() => {
+    fetch("/gyms")
+    .then ((resp) => resp.json())
+    .then((gyms) => setAllGyms(gyms))
+  }, [])
+
   const fullGymList = allGyms.map((gym) => (
     <GymCard 
     key={gym.id}

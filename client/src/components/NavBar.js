@@ -2,7 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-const NavBar = () => {
+const NavBar = ({ setUser }) => {
+
+  function handleLogoutClick() {
+    fetch("/logout", {
+      method: "DELETE"
+    })
+    .then((resp) => {
+      if (resp.ok) {
+        setUser(null);
+      }
+    })
+  }
+
+
   return (
     <div class="nav nav-pills">
       <li class="nav-item">
@@ -25,6 +38,7 @@ const NavBar = () => {
         Gyms
       </NavLink>
       </li>
+      <button onClick={handleLogoutClick}> Logout </button>
     </div>
   )
 }

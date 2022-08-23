@@ -10,7 +10,6 @@ import GymReview from './components/GymReview';
 
 function App() {
   const [user, setUser] = useState(null)
-  const [allGyms, setAllGyms] = useState([])
 
   useEffect(() => {
     fetch("/me").then((resp) => {
@@ -20,11 +19,9 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-    fetch("/gyms")
-    .then ((resp) => resp.json())
-    .then((gyms) => setAllGyms(gyms))
-  }, [])
+  if(!user) return <Login setUser={setUser} />
+
+
   
 
   // function handleLogin(user) {
@@ -37,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setUser={setUser} />
       <Switch>
         <Route exact path="/">
          <Home />
@@ -49,10 +46,10 @@ function App() {
           <SignUp setUser={setUser} />
         </Route>
         <Route path="/gyms">
-          <Gyms allGyms={allGyms} />
+          <Gyms />
         </Route>
         <Route path="/gymreview/:id">
-          <GymReview allGyms={allGyms} />
+          <GymReview />
         </Route>
       </Switch>
     </div>
