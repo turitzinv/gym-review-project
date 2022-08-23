@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Error({ children }) {
+function Error({ error }) {
+
+  console.log(error)
   return (
-      <p>{children}</p>
+      <p>{error}</p>
   );
 }
 

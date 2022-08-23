@@ -19,9 +19,20 @@ const Login = ({ setUser }) => {
         resp.json().then((user) => setUser(user))
       } else {
         resp.json().then((err) => setErrors(err.errors))
+        console.log(errors)
       }
     })
   }
+
+  const fullErrorList = errors.map((error) => (
+    <Error
+    key={error}
+    error={error}
+     />
+  ))
+
+  console.log("these are errors ",errors)
+  //console.log("these are fullErrorList", fullErrorList)
 
   return (
     <form id="login-form" onSubmit={handleSubmit}>
@@ -49,9 +60,7 @@ const Login = ({ setUser }) => {
         Log In
       </button>
       <div>
-        {errors.map((err) => {
-          <Error key={err}>{err}</Error>
-        })}
+       {fullErrorList}
       </div>
     </form>
     
