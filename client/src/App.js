@@ -10,36 +10,32 @@ import GymReview from './components/GymReview';
 
 function App() {
   const [user, setUser] = useState(null)
-  
+
   //Logic below needs to be changed, forcing log in and doesn't allow access to SignUp page
-  // useEffect(() => {
-  //   fetch("/me").then((resp) => {
-  //     if(resp.ok) {
-  //       resp.json().then((user) => setUser(user));
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    fetch("/me").then((resp) => {
+      if(resp.ok) {
+        resp.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
 
-  // if(!user) return <Login setUser={setUser} />
+  if(!user) return <Login setUser={setUser} />
 
+  function handleLogin(user) {
+    setUser(user)
+  }
 
-
-  
-
-  // function handleLogin(user) {
-  //   setUser(user)
-  // }
-
-  // function handleLogout() {
-  //   setUser(null)
-  // }
+  function handleLogout() {
+    setUser(null)
+  }
 
   return (
     <div className="App">
       <NavBar setUser={setUser} />
       <Switch>
         <Route exact path="/">
-         <Home />
+         <Home user={user} />
         </Route>
         <Route path="/loginpage">
           <Login setUser={setUser} />

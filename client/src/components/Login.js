@@ -24,6 +24,7 @@ const Login = ({ setUser }) => {
     }) .then((resp) => {
       if (resp.ok) {
         resp.json().then((user) => setUser(user))
+        history.push("/")
       } else {
         resp.json().then((err) => setErrors(err.errors))
       }
