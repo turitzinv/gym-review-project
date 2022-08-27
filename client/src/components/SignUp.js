@@ -50,6 +50,16 @@ const SignUp = ({ setUser }) => {
         onChange = {(e) => setPassword(e.target.value)}
       />
     </div>
+    <div class="mb-3">
+      <input
+        type="password"
+        class="form-control"
+        id="password-confirmation"
+        placeholder="Password Confirmation"
+        value = {password}
+      />
+    </div>
+    
     <button id="signup-button" type="submit" class="btn btn-dark">
       Sign Up
     </button>

@@ -10,16 +10,18 @@ import GymReview from './components/GymReview';
 
 function App() {
   const [user, setUser] = useState(null)
+  
+  //Logic below needs to be changed, forcing log in and doesn't allow access to SignUp page
+  // useEffect(() => {
+  //   fetch("/me").then((resp) => {
+  //     if(resp.ok) {
+  //       resp.json().then((user) => setUser(user));
+  //     }
+  //   });
+  // }, []);
 
-  useEffect(() => {
-    fetch("/me").then((resp) => {
-      if(resp.ok) {
-        resp.json().then((user) => setUser(user));
-      }
-    });
-  }, []);
+  // if(!user) return <Login setUser={setUser} />
 
-  if(!user) return <Login setUser={setUser} />
 
 
   

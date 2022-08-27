@@ -15,6 +15,12 @@ Review.create(
 )
 
 Review.create(
+  description: "Gym is decent enough.",
+  user_id: 2,
+  gym_id: 1
+)
+
+Review.create(
   description: "Gym is okay, the hours are great but it can get pretty busy even during off peak hours.",
   user_id: 2,
   gym_id: 2

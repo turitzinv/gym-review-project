@@ -1,55 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Review from "./Review";
 
 const GymReview = () => {
-  const [gym, setGym] = useState({})
-  const [reviews, setReviews] = useState([])
+  const [gym, setGym] = useState({});
+  const [reviews, setReviews] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     fetch(`/gyms/${id}`)
-    .then((resp) => resp.json())
-    .then((uniqueGym) => setGym(uniqueGym))
-  }, [id])
+      .then((resp) => resp.json())
+      .then((uniqueGym) => {
+        setReviews(uniqueGym.reviews);
+        setGym(uniqueGym);
+      });
+  }, [id]);
 
-  console.log(reviews)
-
-  // console.log(gym.reviews)
-  // let allReviews = gym.reviews
-  // console.log(allReviews)
-  // let displayReviews = []
-
-  // allReviews.map(x =>  {
-  //   displayReviews.push(x.description)
-  //   setReviews(displayReviews)
-  // })
-
-  // console.log(displayReviews)
-
-  // let reviews = gym.map((gym) => {
-  //   return gym.reviews
-  // })
-
-
-
-  // gym.reviews.forEach(review => {
-  //   for( let key in review) {
-  //     console.log(`${key}: ${review[key]}`)
-  //   }
-  // })
-
-  // reviews.forEach(review => {
-  //   displayReviews.push()
-  // })
-
-  // function description(reviews) {
-  //   for (let i=0, i++, i <= reviews.length) {
-  //     displayReviews.push(reviews[i].description)
-  //   }
-  //   console.log(displayReviews)
-  // }
-
- 
+  function gymReviews() {
+    if (reviews instanceof Array) {
+      return reviews.map((review) => {
+         <Review key={review.id} description={review.description} />;
+      });
+    } else {
+      return null;
+    }
+  }
 
   return (
     <div>
@@ -57,11 +32,9 @@ const GymReview = () => {
       <h2>{gym.name}</h2>
       <p>{gym.address}</p>
       <h3>Reviews</h3>
-      <p></p>
+      {gymReviews()}
     </div>
-  )
-}
+  );
+};
 
-export default GymReview
-
-//{description(reviews)}
+export default GymReview;

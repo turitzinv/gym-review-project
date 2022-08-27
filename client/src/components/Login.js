@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import Error from "./Error";
+import {useHistory} from "react-router-dom";
 
 const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
+
+  let history = useHistory()
+
+  function onClick(){
+    history.push("/signuppage")
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -23,7 +30,7 @@ const Login = ({ setUser }) => {
       }
     })
   }
-
+  //turn fullErrorsList into a function (similar to GymReviews, null if no and map if there is)
   const fullErrorList = errors.map((error) => (
     <Error
     key={error}
@@ -58,6 +65,9 @@ const Login = ({ setUser }) => {
       </div>
       <button id="login-button" type="submit" class="btn btn-dark">
         Log In
+      </button>
+      <button id="login-button" onClick={onClick} class="btn btn-dark">
+        Sign Up
       </button>
       <div>
        {fullErrorList}
