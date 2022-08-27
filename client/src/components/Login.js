@@ -9,11 +9,11 @@ const Login = ({ setUser }) => {
 
   let history = useHistory()
 
-  function onClick(){
-    history.push("/signuppage")
-  }
+  // function onClick(){
+  //   history.push("/signuppage")
+  // }
 
-  function handleSubmit(event) {
+  function handleLogin(event) {
     event.preventDefault();
     fetch("/login", {
       method: "POST",
@@ -24,6 +24,24 @@ const Login = ({ setUser }) => {
     }) .then((resp) => {
       if (resp.ok) {
         resp.json().then((user) => setUser(user))
+        history.push("/")
+      } else {
+        resp.json().then((err) => setErrors(err.errors))
+      }
+    })
+  }
+
+  function handleSignUp(event) {
+    event.preventDefault()
+    fetch("/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ username, password}),
+    }) .then((resp) => {
+      if (resp.ok) {
+        resp.json().then(setUser)
         history.push("/")
       } else {
         resp.json().then((err) => setErrors(err.errors))
@@ -43,7 +61,7 @@ const Login = ({ setUser }) => {
 
 
   return (
-    <form id="login-form" onSubmit={handleSubmit}>
+    <form id="login-form" onSubmit={handleLogin}>
       <div class="mb-3">
         <input
           type="text"
@@ -68,7 +86,7 @@ const Login = ({ setUser }) => {
       <button id="login-button" type="submit" class="btn btn-dark">
         Log In
       </button>
-      <button id="login-button" onClick={onClick} class="btn btn-dark">
+      <button id="signup-button" onClick={handleSignUp} class="btn btn-dark">
         Sign Up
       </button>
     </form>
