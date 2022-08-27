@@ -18,9 +18,9 @@ const GymReview = () => {
 
   function gymReviews() {
     if (reviews instanceof Array) {
-      return reviews.map((review) => {
-         <Review key={review.id} description={review.description} />;
-      });
+      return reviews.map((review) => 
+         <Review key={review.id} description={review.description} />
+      );
     } else {
       return null;
     }

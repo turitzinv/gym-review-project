@@ -1,11 +1,12 @@
 import React from 'react'
 
-function Error({ error }) {
-
-  console.log(error)
+const Error = ({ error }) => {
+  
   return (
-      <p>{error}</p>
-  );
+    <div>
+      <h3>{error}</h3>
+    </div>
+  )
 }
 
 export default Error;

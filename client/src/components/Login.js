@@ -26,20 +26,20 @@ const Login = ({ setUser }) => {
         resp.json().then((user) => setUser(user))
       } else {
         resp.json().then((err) => setErrors(err.errors))
-        console.log(errors)
       }
     })
   }
-  //turn fullErrorsList into a function (similar to GymReviews, null if no and map if there is)
-  const fullErrorList = errors.map((error) => (
-    <Error
-    key={error}
-    error={error}
-     />
-  ))
 
-  console.log("these are errors ",errors)
-  //console.log("these are fullErrorList", fullErrorList)
+  function errorRender() {
+    if (errors instanceof Array) {
+      return errors.map((error) => 
+      <Error key={error} error={error} />
+      )
+    } else {
+      return null
+    }
+  }
+
 
   return (
     <form id="login-form" onSubmit={handleSubmit}>
@@ -63,17 +63,14 @@ const Login = ({ setUser }) => {
           onChange = {(e) => setPassword(e.target.value)}
         />
       </div>
+      {errorRender()}
       <button id="login-button" type="submit" class="btn btn-dark">
         Log In
       </button>
       <button id="login-button" onClick={onClick} class="btn btn-dark">
         Sign Up
       </button>
-      <div>
-       {fullErrorList}
-      </div>
     </form>
-    
   );
 };
 
