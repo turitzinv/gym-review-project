@@ -4,6 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = ({ setUser }) => {
 
+  const linkStyles = {
+    display: "inline-block",
+    width: "120px",
+    padding: "10px",
+    margin: "0 4px 6px",
+    background: "Dodgerblue",
+    textDecoration: "none",
+    color: "white",
+  };
+
   function handleLogoutClick() {
     fetch("/logout", {
       method: "DELETE"
@@ -19,26 +29,16 @@ const NavBar = ({ setUser }) => {
   return (
     <div class="nav nav-pills">
       <li class="nav-item">
-      <NavLink class="nav-link active" aria-current="page" to="/">
+      <NavLink style={linkStyles} to="/">
         Home
       </NavLink>
       </li>
       <li class="nav_item">
-      <NavLink class="nav-link" aria-current="page" to="/loginpage">
-        Log in
-      </NavLink>
-      </li>
-      <li class="nav_item">
-      <NavLink class="nav-link" aria-current="page" to="/signuppage">
-        Sign Up
-      </NavLink>
-      </li>
-      <li class="nav_item">
-      <NavLink class="nav-link" aria-current="page" to="/gyms">
+      <NavLink style={linkStyles} to="/gyms">
         Gyms
       </NavLink>
       </li>
-      <button onClick={handleLogoutClick}> Logout </button>
+      <button id="logout-button" onClick={handleLogoutClick} style={linkStyles}> Logout </button>
     </div>
   )
 }

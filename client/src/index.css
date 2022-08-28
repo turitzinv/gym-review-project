@@ -31,6 +31,12 @@ code {
   top: 150px;
 }
 
+#logout-button {
+  position:absolute; 
+  top:0; 
+  right:0
+}
+
 #signup-form {
   text-align: center;
   justify-content: center;
