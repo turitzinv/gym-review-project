@@ -32,7 +32,9 @@ const GymReview = () => {
       <h2>{gym.name}</h2>
       <p>{gym.address}</p>
       <h3>Reviews</h3>
-      {gymReviews()}
+      <table id="review-table">
+      <tbody>{gymReviews()}</tbody>
+      </table>
     </div>
   );
 };

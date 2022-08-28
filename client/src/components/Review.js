@@ -3,9 +3,11 @@ import React from 'react'
 const Review = ({description}) => {
 
   return (
-    <div>
-      <p>{description}</p>
-    </div>
+    <tr>
+      <td>{description}</td>
+      <td><button> Edit </button></td>
+      <td><button> Delete </button></td>
+    </tr>
   )
 }
 

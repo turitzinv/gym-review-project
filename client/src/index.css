@@ -47,3 +47,11 @@ code {
   position: relative;
   top: 150px;
 }
+
+#review-table {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  border-spacing: 25px 10px
+}
