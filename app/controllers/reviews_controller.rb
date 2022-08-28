@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
 
   def create
     review = Review.create!(description: params[:description], user_id: session[:user_id])
-    render json: review, include :user, status: :created
+    render json: review, include: :user, status: :created
   end
 
   private

@@ -18,8 +18,16 @@ const GymReview = () => {
       });
   }, [id]);
 
+  function handleAddingReview(newReview) {
+    setReviews([...reviews, newReview])
+  }
+
   function addReviewClick() {
-    setReviewInput(<AddReview setReviewInput={setReviewInput} />)
+    setReviewInput(
+    <AddReview 
+      setReviewInput={setReviewInput} 
+      handleAddingReview={handleAddingReview}
+      />)
   }
 
   function gymReviews() {
