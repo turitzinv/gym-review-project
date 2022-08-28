@@ -27,7 +27,7 @@ const NavBar = ({ setUser }) => {
 
 
   return (
-    <div class="nav nav-pills">
+    <div class="nav">
       <li class="nav-item">
       <NavLink style={linkStyles} to="/">
         Home

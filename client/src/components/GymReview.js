@@ -28,7 +28,7 @@ const GymReview = () => {
 
   return (
     <div>
-      <img src={gym.image_url} />
+      <img src={gym.image_url} alt={gym.name} />
       <h2>{gym.name}</h2>
       <p>{gym.address}</p>
       <h3>Reviews</h3>
