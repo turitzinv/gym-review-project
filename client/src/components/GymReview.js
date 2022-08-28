@@ -19,7 +19,7 @@ const GymReview = () => {
   }, [id]);
 
   function addReviewClick() {
-    setReviewInput(<AddReview />)
+    setReviewInput(<AddReview setReviewInput={setReviewInput} />)
   }
 
   function gymReviews() {

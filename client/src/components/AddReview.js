@@ -1,9 +1,16 @@
 import React from 'react'
 
-const AddReview = () => {
+const AddReview = ({ setReviewInput }) => {
+
+  function closeReview() {
+    setReviewInput([])
+  }
+
   return (
     <div>
-     <p> AddReview </p>
+     <textarea id="review-input" placeholder="Type your review..." />
+     <button>Submit</button>
+     <button onClick={closeReview}>Close</button>
     </div>
   )
 }
