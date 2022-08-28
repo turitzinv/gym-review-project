@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Review from "./Review";
+import AddReview from "./AddReview";
 
 const GymReview = () => {
   const [gym, setGym] = useState({});
   const [reviews, setReviews] = useState([]);
+  const [reviewInput, setReviewInput] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -15,6 +17,10 @@ const GymReview = () => {
         setGym(uniqueGym);
       });
   }, [id]);
+
+  function addReviewClick() {
+    setReviewInput(<AddReview />)
+  }
 
   function gymReviews() {
     if (reviews instanceof Array) {
@@ -31,6 +37,8 @@ const GymReview = () => {
       <img src={gym.image_url} alt={gym.name} />
       <h2>{gym.name}</h2>
       <p>{gym.address}</p>
+      <button onClick={addReviewClick}>Add a review</button>
+      {reviewInput}
       <h3>Reviews</h3>
       <table id="review-table">
       <tbody>{gymReviews()}</tbody>
