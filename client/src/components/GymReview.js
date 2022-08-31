@@ -27,13 +27,22 @@ const GymReview = () => {
     <AddReview 
       setReviewInput={setReviewInput} 
       handleAddingReview={handleAddingReview}
+      gym_id={gym.id}
+      gym={gym}
       />)
   }
+
+  function handleDeleteReview(deletedReview) {
+    const updatedReviews = reviews.filter((review) => review.id !== deletedReview.id);
+    setReviews(updatedReviews)
+  }
+
+
 
   function gymReviews() {
     if (reviews instanceof Array) {
       return reviews.map((review) => 
-         <Review key={review.id} description={review.description} />
+         <Review key={review.id} description={review.description} review={review} handleDeleteReview={handleDeleteReview} />
       );
     } else {
       return null;

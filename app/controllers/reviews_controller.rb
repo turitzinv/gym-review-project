@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
+  #rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
   def index
     reviews = Review.all
@@ -11,10 +11,16 @@ class ReviewsController < ApplicationController
     render json: review, include: :user, status: :created
   end
 
+  def destroy
+    review = Review.find(params[:id])
+    review.destroy
+    head :no_content
+  end
+
   private
 
-  def record_invalid
-    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
-  end
+  # def record_invalid
+  #   render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+  # end
 
 end
