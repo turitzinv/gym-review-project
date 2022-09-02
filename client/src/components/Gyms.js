@@ -17,7 +17,6 @@ const Gyms = () => {
     address={gym.address}
     image={gym.image_url}
     gym={gym}
-    review={gym.reviews} //unsure if review will be used, maybe save for show
     />
   ))
 

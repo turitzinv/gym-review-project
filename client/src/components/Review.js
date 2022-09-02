@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
-import EditReview from './EditReview';
+//import EditReview from './EditReview';
 
 const Review = ({ description, review, handleDeleteReview }) => {
 
@@ -18,6 +18,7 @@ const Review = ({ description, review, handleDeleteReview }) => {
   }
 
   function handleEditClick() {
+    //<EditReview id={review.id} />
     history.push(`/reviews/${review.id}`)
   }
 

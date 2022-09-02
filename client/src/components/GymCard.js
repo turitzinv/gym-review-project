@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 
-const GymCard = ({ name, address,image, gym }) => {
+const GymCard = ({ name, address, image, gym }) => {
 
   let history = useHistory()
 
