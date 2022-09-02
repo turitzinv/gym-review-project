@@ -16,8 +16,24 @@ const EditReview = () => {
    .then((review) => setReview(review))
   }, [])
 
-  console.log(newReview)
+
   //PATCH will occur here to update review
+
+  function handleUpdatingReview() {
+    fetch(`/reviews/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        description: newReview.description
+      }),
+    })
+    .then((resp) => resp.json())
+    .then((updatedReview) => console.log(updatedReview)) //do I need to update states here? Might not need to
+  }
+
+
 
 
   function handleReviewChange(e) {
@@ -29,8 +45,8 @@ const EditReview = () => {
 
   return (
     <div>
-      <textarea id="review-input" name="description" text={review.description} onChange={handleReviewChange}></textarea>
-      <button>Finalize Edit</button>
+      <textarea id="review-input" name="description" defaultValue={review.description} onChange={handleReviewChange}></textarea>
+      <button onClick={handleUpdatingReview}>Finalize Edit</button>
       <button>Cancel Edit</button>
     </div>
   )

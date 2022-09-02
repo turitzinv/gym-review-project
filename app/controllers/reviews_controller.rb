@@ -22,6 +22,12 @@ class ReviewsController < ApplicationController
     head :no_content
   end
 
+  def update
+    review = Review.find(params[:id])
+    review.update(description: params[:description])
+    render json: review
+  end
+
   private
 
   def record_invalid
