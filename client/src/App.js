@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Gyms from './components/Gyms';
 import GymReview from './components/GymReview';
+import EditReview from './components/EditReview';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/gymreview/:id">
           <GymReview user_id={user.id} />
+        </Route>
+        <Route path="/reviews/:id">
+          <EditReview />
         </Route>
       </Switch>
     </div>

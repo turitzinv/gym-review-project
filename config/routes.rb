@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   get "/users", to: "users#index"
-  #get "/reviews", to: "reviews#index"
 
   resources :reviews
 

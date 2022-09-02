@@ -1,9 +1,14 @@
 class ReviewsController < ApplicationController
-  #rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
+  rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
   def index
     reviews = Review.all
     render json: reviews, include: :gym
+  end
+
+  def show
+    review = Review.find(params[:id])
+    render json: review, include: :gym
   end
 
   def create
@@ -19,8 +24,8 @@ class ReviewsController < ApplicationController
 
   private
 
-  # def record_invalid
-  #   render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
-  # end
+  def record_invalid
+    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+  end
 
 end
