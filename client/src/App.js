@@ -32,7 +32,7 @@ function App() {
           <Gyms />
         </Route>
         <Route path="/gymreview/:id">
-          <GymReview />
+          <GymReview user_id={user.id} />
         </Route>
       </Switch>
     </div>

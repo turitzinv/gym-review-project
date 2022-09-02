@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Review from "./Review";
 import AddReview from "./AddReview";
 
-const GymReview = () => {
+const GymReview = ({ user_id }) => {
   const [gym, setGym] = useState({});
   const [reviews, setReviews] = useState([]);
   const [reviewInput, setReviewInput] = useState([]);
@@ -28,7 +28,8 @@ const GymReview = () => {
       setReviewInput={setReviewInput} 
       handleAddingReview={handleAddingReview}
       gym_id={gym.id}
-      gym={gym}
+      specificGym={gym}
+      user_id={user_id}
       />)
   }
 

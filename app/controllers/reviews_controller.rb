@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    review = Review.create!(description: params[:description], user_id: session[:user_id])
+    review = Review.create!(description: params[:description], gym_id: params[:gym_id], user_id: session[:user_id])
     render json: review, include: :user, status: :created
   end
 

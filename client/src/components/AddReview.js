@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AddReview = ({ setReviewInput, handleAddingReview, gym_id, gym }) => {
+const AddReview = ({ setReviewInput, handleAddingReview, gym_id, user_id }) => {
   const [review, setReview] = useState({
     description: ""
   })
@@ -16,11 +16,8 @@ const AddReview = ({ setReviewInput, handleAddingReview, gym_id, gym }) => {
     })
   }
 
-  //console.log(gym_id)
-  //console.log(gym)
 
-
-  function reviewAddClick() {
+  function reviewAddClick() { 
     fetch("/reviews", {
       method: "POST",
       headers: {
@@ -28,16 +25,12 @@ const AddReview = ({ setReviewInput, handleAddingReview, gym_id, gym }) => {
       },
       body: JSON.stringify({
         description: review.description,
-        gym: {
-          id: gym_id,
-          name: gym.name,
-          address: gym.address,
-          image_url: gym.image_url
-        }
+        gym_id: gym_id,
+        user_id: user_id
       }),
     })
     .then((resp) => resp.json())
-    .then((newReview) =>console.log(newReview))
+    .then((newReview) => handleAddingReview(newReview))
   }
 
 
