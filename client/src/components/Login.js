@@ -21,7 +21,7 @@ const Login = ({ setUser }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ username, password }),
-    }) .then((resp) => {
+    }).then((resp) => {
       if (resp.ok) {
         resp.json().then((user) => setUser(user))
         history.push("/")
@@ -39,7 +39,7 @@ const Login = ({ setUser }) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ username, password}),
-    }) .then((resp) => {
+    }).then((resp) => {
       if (resp.ok) {
         resp.json().then(setUser)
         history.push("/")

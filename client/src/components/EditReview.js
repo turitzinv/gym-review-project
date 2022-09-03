@@ -16,7 +16,7 @@ const EditReview = () => {
    fetch(`/reviews/${id}`)
    .then((resp => resp.json()))
    .then((review) => setReview(review))
-  }, [])
+  }, [id])
 
 
   function handleUpdatingReview() {

@@ -43,7 +43,7 @@ const GymReview = ({ user_id }) => {
   function gymReviews() {
     if (reviews instanceof Array) {
       return reviews.map((review) => 
-         <Review key={review.id} description={review.description} review={review} handleDeleteReview={handleDeleteReview} />
+         <Review key={review.id} description={review.description} review={review} handleDeleteReview={handleDeleteReview} currentUser={user_id} />
       );
     } else {
       return null;

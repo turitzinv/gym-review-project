@@ -10,7 +10,6 @@ import EditReview from './components/EditReview';
 
 function App() {
   const [user, setUser] = useState(null)
-  //const [editReview, setEditReview] = useState()
 
   useEffect(() => {
     fetch("/me").then((resp) => {
@@ -19,12 +18,6 @@ function App() {
       }
     });
   }, []);
-
-  // useEffect(() => {
-  //   fetch("/reviews")
-  //   .then((resp) => resp.json())
-  //   .then((reviews) => setEditReview(reviews))
-  // }, [])
 
   if(!user) return <Login setUser={setUser} />
 
