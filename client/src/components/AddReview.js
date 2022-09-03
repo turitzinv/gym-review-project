@@ -31,6 +31,7 @@ const AddReview = ({ setReviewInput, handleAddingReview, gym_id, user_id }) => {
     })
     .then((resp) => resp.json())
     .then((newReview) => handleAddingReview(newReview))
+    setReview({ description: ""})
   }
 
 
