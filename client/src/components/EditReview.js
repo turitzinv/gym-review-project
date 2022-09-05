@@ -47,10 +47,10 @@ const EditReview = () => {
   }
 
   return (
-    <div>
+    <div id="edit-review">
       <textarea id="review-input" name="description" defaultValue={review.description} onChange={handleReviewChange}></textarea>
-      <button onClick={handleUpdatingReview}>Finalize Edit</button>
-      <button onClick={cancelEditClick}>Cancel Edit</button>
+      <button class="edit-button" onClick={handleUpdatingReview}>Finalize Edit</button>
+      <button class="edit-button" onClick={cancelEditClick}>Cancel Edit</button>
     </div>
   )
 }

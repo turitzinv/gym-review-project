@@ -69,3 +69,25 @@ code {
   margin-left: auto;
   margin-right: auto;
 }
+
+#edit-review {
+  margin-top: 125px;
+}
+
+.edit-button {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#click-for-reviews {
+  margin-bottom: 10px;
+}
+
+#gym-card {
+  border: 1px solid black;
+  border-spacing: 25px 10px;
+}
+
+#gym-image {
+  margin-top: 10px;
+}

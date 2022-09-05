@@ -11,11 +11,11 @@ const GymCard = ({ name, address, image, gym }) => {
 
 
   return (
-    <div>
-      <img src={image} alt={gym.name}/>
+    <div id="gym-card">
+      <img id="gym-image" src={image} alt={gym.name}/>
       <h2>{name}</h2>
       <p>{address}</p>
-      <button onClick= {onClick}>Click for Reviews</button>
+      <button id="click-for-reviews" onClick= {onClick}>Click for Reviews</button>
     </div>
   )
 }
