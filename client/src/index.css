@@ -18,7 +18,7 @@ code {
   margin: auto;
   border: 1px solid black;
   position: relative;
-  top: 150px
+  top: 75px
 }
 
 #login-form {
@@ -28,7 +28,10 @@ code {
 
 #login-button {
   position: relative;
-  top: 150px;
+  top: 100px;
+  margin-right: 10px;
+  background-color: dodgerblue;
+  color: white
 }
 
 #logout-button {
@@ -45,7 +48,9 @@ code {
 
 #signup-button {
   position: relative;
-  top: 150px;
+  top: 100px;
+  background-color: dodgerblue;
+  color: white
 }
 
 #review-table {
@@ -90,4 +95,17 @@ code {
 
 #gym-image {
   margin-top: 10px;
+}
+
+#login-gymview {
+  height: 100px;
+  width: 950px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#login-message {
+  text-align: center;
 }
