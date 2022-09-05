@@ -25,10 +25,10 @@ const Review = ({ description, review, handleDeleteReview, currentUser }) => {
     <tr id="review-description">
       <td>{description}</td>
       { review.user_id === currentUser ? (
-      <tr>
+      <>
         <td><button onClick={handleEditClick}> Edit </button></td>
         <td><button onClick={handleDeleteClick}> Delete </button></td>
-      </tr>
+      </>
     ) : (
       null
     )}
@@ -37,11 +37,3 @@ const Review = ({ description, review, handleDeleteReview, currentUser }) => {
 }
 
 export default Review
-
-// return (
-//   <tr id="review-description">
-//     <td>{description}</td>
-//     <td><button onClick={handleEditClick}> Edit </button></td>
-//     <td><button onClick={handleDeleteClick}> Delete </button></td>
-//   </tr>
-// )

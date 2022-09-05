@@ -4,4 +4,6 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :gyms, through: :reviews
 
+  validates :username, presence: true, uniqueness: true
+
 end

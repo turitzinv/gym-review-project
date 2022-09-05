@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     user = User.create!(user_params)
     byebug
     render json: user
+    #need to render errors as well here for uniqueness
   end
   
   def show
