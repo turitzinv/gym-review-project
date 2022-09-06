@@ -18,7 +18,7 @@ code {
   margin: auto;
   border: 1px solid black;
   position: relative;
-  top: 75px
+  top: 40px
 }
 
 #login-form {
@@ -28,7 +28,7 @@ code {
 
 #login-button {
   position: relative;
-  top: 100px;
+  top: 60px;
   margin-right: 10px;
   background-color: dodgerblue;
   color: white
@@ -48,7 +48,7 @@ code {
 
 #signup-button {
   position: relative;
-  top: 100px;
+  top: 60px;
   background-color: dodgerblue;
   color: white
 }
@@ -82,15 +82,18 @@ code {
 .edit-button {
   margin-top: 10px;
   margin-right: 10px;
+  background-color: dodgerblue;
+  color: white;
 }
 
 #click-for-reviews {
   margin-bottom: 10px;
+  background-color: dodgerblue;
+  color: white;
 }
 
 #gym-card {
-  border: 1px solid black;
-  border-spacing: 25px 10px;
+  border: 15px inset dodgerblue;
 }
 
 #gym-image {
@@ -98,8 +101,6 @@ code {
 }
 
 #login-gymview {
-  height: 100px;
-  width: 950px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,4 +109,22 @@ code {
 
 #login-message {
   text-align: center;
+}
+
+.review-buttons{
+  background-color: dodgerblue;
+  color: white;
+}
+
+#add-a-review {
+  background-color: dodgerblue;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.add-review-buttons {
+  background-color: dodgerblue;
+  color: white;
+  margin-right: 5px;
+  margin-top: 5px;
 }

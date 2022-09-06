@@ -55,8 +55,8 @@ const AddReview = ({ setReviewInput, handleAddingReview, gym_id, user_id }) => {
     <div>
       {errorRender()}
      <textarea id="review-input" name="description" onChange={handleChange} value={review.description} placeholder="Type your review description..." />
-     <button onClick={reviewAddClick}>Submit</button>
-     <button onClick={closeReview}>Close</button>
+     <button class="add-review-buttons" onClick={reviewAddClick}>Submit</button>
+     <button class="add-review-buttons" onClick={closeReview}>Close</button>
     </div>
   )
 }

@@ -26,8 +26,8 @@ const Review = ({ description, review, handleDeleteReview, currentUser }) => {
       <td>{description}</td>
       { review.user_id === currentUser ? (
       <>
-        <td><button onClick={handleEditClick}> Edit </button></td>
-        <td><button onClick={handleDeleteClick}> Delete </button></td>
+        <td><button class="review-buttons" onClick={handleEditClick}> Edit </button></td>
+        <td><button class="review-buttons" onClick={handleDeleteClick}> Delete </button></td>
       </>
     ) : (
       null

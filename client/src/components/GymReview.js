@@ -55,7 +55,7 @@ const GymReview = ({ user_id }) => {
       <img src={gym.image_url} alt={gym.name} />
       <h2>{gym.name}</h2>
       <p>{gym.address}</p>
-      <button onClick={addReviewClick}>Add a review</button>
+      <button id="add-a-review" onClick={addReviewClick}>Add a review</button>
       {reviewInput}
       <h3>Reviews</h3>
       <table id="review-table">
