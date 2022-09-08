@@ -30,7 +30,6 @@ const EditReview = () => {
       }),
     })
     .then((resp) => resp.json())
-    //.then((updatedReview) => console.log(updatedReview)) //do I need to update states here? Might not need to
     history.push(`/gymreview/${review.gym_id}`)
   }
 

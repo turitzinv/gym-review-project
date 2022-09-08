@@ -9,10 +9,6 @@ const Login = ({ setUser }) => {
 
   let history = useHistory();
 
-  // function onClick(){
-  //   history.push("/signuppage")
-  // }
-
   function handleLogin(event) {
     event.preventDefault();
     fetch("/login", {
