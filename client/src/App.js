@@ -22,7 +22,7 @@ function App() {
 
   if(!user) return <Login setUser={setUser} />
 
-//need Add Gym route added below
+
   return (
     <div className="App">
       <NavBar setUser={setUser} />

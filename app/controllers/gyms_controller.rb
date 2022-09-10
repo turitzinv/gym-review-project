@@ -14,4 +14,6 @@ class GymsController < ApplicationController
     byebug
   end
 
+  #error rendering needed for creating a new gym without a field
+
 end
