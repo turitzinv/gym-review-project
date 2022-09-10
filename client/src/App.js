@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Gyms from './components/Gyms';
 import GymReview from './components/GymReview';
 import EditReview from './components/EditReview';
+import AddGym from './components/AddGym';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -21,7 +22,7 @@ function App() {
 
   if(!user) return <Login setUser={setUser} />
 
-
+//need Add Gym route added below
   return (
     <div className="App">
       <NavBar setUser={setUser} />
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/gyms">
           <Gyms />
+        </Route>
+        <Route path="/gym_create">
+          <AddGym />
         </Route>
         <Route path="/gymreview/:id">
           <GymReview user_id={user.id} />

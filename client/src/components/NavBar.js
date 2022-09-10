@@ -38,6 +38,11 @@ const NavBar = ({ setUser }) => {
         Gyms
       </NavLink>
       </li>
+      <li class="nav_item">
+      <NavLink style={linkStyles} to="/gym_create">
+        Add Gym
+      </NavLink>
+      </li>
       <button id="logout-button" onClick={handleLogoutClick} style={linkStyles}> Logout </button>
     </div>
   )

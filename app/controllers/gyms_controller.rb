@@ -10,4 +10,8 @@ class GymsController < ApplicationController
     render json: gym, include: :reviews
   end
 
+  def create
+    byebug
+  end
+
 end
