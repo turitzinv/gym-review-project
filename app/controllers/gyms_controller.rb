@@ -1,4 +1,5 @@
 class GymsController < ApplicationController
+  rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
 
   def index
     gyms = Gym.all
@@ -11,9 +12,14 @@ class GymsController < ApplicationController
   end
 
   def create
-    byebug
+    gym = Gym.create!(name: params[:name], address: params[:address], image_url: params[:image_url])
+    render json: gym
   end
 
-  #error rendering needed for creating a new gym without a field
+  private
+
+  def record_invalid(invalid)
+    render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+  end
 
 end
