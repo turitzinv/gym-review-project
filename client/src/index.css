@@ -133,7 +133,7 @@ code {
   text-align: center;
 }
 
-.gym-input{
+.gym-input {
   padding: 0.25rem 1rem;
   height: 50px;
   margin: 5px;
@@ -150,6 +150,10 @@ code {
   margin-top: 25px;
 }
 
-#add-gym-header{
+#add-gym-header {
+  padding-top: 50px;
+}
+
+#my-reviewed-gyms{
   padding-top: 50px;
 }

@@ -6,7 +6,7 @@ const NavBar = ({ setUser }) => {
 
   const linkStyles = {
     display: "inline-block",
-    width: "120px",
+    width: "162px",
     padding: "10px",
     margin: "0 4px 6px",
     background: "Dodgerblue",
@@ -41,6 +41,11 @@ const NavBar = ({ setUser }) => {
       <li class="nav_item">
       <NavLink style={linkStyles} to="/gym_create">
         Add Gym
+      </NavLink>
+      </li>
+      <li class="nav_item">
+      <NavLink style={linkStyles} to="/my_gyms_reviewed">
+        My Reviewed Gyms
       </NavLink>
       </li>
       <button id="logout-button" onClick={handleLogoutClick} style={linkStyles}> Logout </button>

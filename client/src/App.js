@@ -8,6 +8,7 @@ import Gyms from './components/Gyms';
 import GymReview from './components/GymReview';
 import EditReview from './components/EditReview';
 import AddGym from './components/AddGym';
+import MyGymsReviewed from './components/MyGymsReviewed';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path="/gym_create">
           <AddGym />
+        </Route>
+        <Route path="/my_gyms_reviewed">
+          <MyGymsReviewed user={user} />
         </Route>
         <Route path="/gymreview/:id">
           <GymReview user_id={user.id} />
