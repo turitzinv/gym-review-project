@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :record_invalid
+  before_action :authorize
+  
 
   def index
     reviews = Review.all
@@ -32,6 +34,10 @@ class ReviewsController < ApplicationController
 
   def record_invalid(invalid)
     render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
+  end
+
+  def authorize
+    return render json: { error: "Not Authorized" }, status: :unauthorized unless session.include? :user_id
   end
 
 end
