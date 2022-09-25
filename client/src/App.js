@@ -38,7 +38,7 @@ function App() {
           <AddGym />
         </Route>
         <Route path="/my_gyms_reviewed">
-          <MyGymsReviewed user={user} />
+          <MyGymsReviewed />
         </Route>
         <Route path="/gymreview/:id">
           <GymReview user_id={user.id} />
