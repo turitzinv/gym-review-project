@@ -33,7 +33,6 @@ const AddGym = () => {
       }),
     }).then((resp => {
       if (resp.ok) {
-        //resp.json().then((newGym) => console.log(newGym))
         setFormData({
           name: "",
           address: "",

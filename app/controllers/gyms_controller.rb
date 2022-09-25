@@ -4,12 +4,12 @@ class GymsController < ApplicationController
 
   def index
     gyms = Gym.all
-    render json: gyms, include: :reviews
+    render json: gyms
   end
   
   def show
     gym = Gym.find(params[:id])
-    render json: gym, include: :reviews
+    render json: gym
   end
 
   def create

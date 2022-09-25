@@ -5,12 +5,12 @@ class ReviewsController < ApplicationController
 
   def index
     reviews = Review.all
-    render json: reviews, include: :gym
+    render json: reviews
   end
 
   def show
     review = Review.find(params[:id])
-    render json: review, include: :gym
+    render json: review
   end
 
   def create
@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
 
   def update
     review = Review.find(params[:id])
-    review.update(description: params[:description])
+    review.update!(description: params[:description])
     render json: review
   end
 
