@@ -39,3 +39,6 @@ ActiveRecord::Schema.define(version: 2022_08_19_230254) do
   end
 
 end
+
+#add button to your website that will sort gyms to be in aplhabetical order
+#sorting to occur on the backend

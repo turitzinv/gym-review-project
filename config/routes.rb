@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   get "/users", to: "users#index"
   post "/gyms", to: "gyms#create"
+  get "/gyms/sort", to: "gyms#sort"
 
   resources :reviews
 
