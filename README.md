@@ -23,13 +23,15 @@ bundle install
 npm install --prefix client
 ```
 
-```
+
 Running the backend (http://localhost:3000):
+```
 rails s
 ```
 
-```
+
 Running the frontend (http://localhost:4000)
+```
 npm start --prefix client
 ```
 
