@@ -16,17 +16,22 @@ This application utilizes Ruby on Rails for the backend, Postgresql Database, an
 
 Please follow the below installation instructions:
 
+```
 git clone git@github.com:turitzinv/gym-review-project.git
 cd gym-review-project
 bundle install
 npm install --prefix client
+```
 
-
+```
 Running the backend (http://localhost:3000):
 rails s
+```
 
+```
 Running the frontend (http://localhost:4000)
 npm start --prefix client
+```
 
 
 # Navigation
