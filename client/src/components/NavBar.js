@@ -27,23 +27,23 @@ const NavBar = ({ setUser }) => {
 
 
   return (
-    <div class="nav">
-      <li class="nav-item">
+    <div className="nav">
+      <li className="nav-item">
       <NavLink style={linkStyles} to="/">
         Home
       </NavLink>
       </li>
-      <li class="nav_item">
+      <li className="nav_item">
       <NavLink style={linkStyles} to="/gyms">
         Gyms
       </NavLink>
       </li>
-      <li class="nav_item">
+      <li className="nav_item">
       <NavLink style={linkStyles} to="/gym_create">
         Add Gym
       </NavLink>
       </li>
-      <li class="nav_item">
+      <li className="nav_item">
       <NavLink style={linkStyles} to="/my_gyms_reviewed">
         My Reviewed Gyms
       </NavLink>

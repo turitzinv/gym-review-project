@@ -58,20 +58,20 @@ const Login = ({ setUser }) => {
       <h1 id="login-gymview">GymView</h1>
       <p id="login-message">Please Login or Create an Account</p>
       <form id="login-form" onSubmit={handleLogin}>
-        <div class="mb-3">
+        <div className="mb-3">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="username"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div class="mb-3">
+        <div className="mb-3">
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="password"
             placeholder="Password"
             value={password}
