@@ -2,6 +2,10 @@
 
 GymView is an application that allows users to create reviews for Gyms they've attended. A user must log in or create an account before accessing GymView. User will be notified if a username already exists or if an incorrect username/password was submitted.
 
+# Video Demonstration of Application
+
+https://youtu.be/6euqM9LxLso
+
 # Tech
 
 This application utilizes Ruby on Rails for the backend, Postgresql Database, and React.js frontend. The frontend uses components and react-router-dom:
