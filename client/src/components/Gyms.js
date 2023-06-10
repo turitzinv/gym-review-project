@@ -34,7 +34,7 @@ const Gyms = () => {
 
   return (
     <div>
-      <button onClick={sortGymClick}>Sort Gyms</button>
+      {/* <button onClick={sortGymClick}>Sort Gyms</button> */}
       {fullGymList}
     </div>
   )
